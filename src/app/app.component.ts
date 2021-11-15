@@ -25,11 +25,6 @@ export class AppComponent implements OnInit, OnDestroy{
     return this.http.get<Lembrete[]>(environment.lembretesUrl)
   }
 
-  reloadLembretes(){
-    this.lembretes = [];
-    this.ngOnInit();
-  }
-
   ngOnDestroy(): void {
     this.getLembretesSubscription?.unsubscribe();
   }

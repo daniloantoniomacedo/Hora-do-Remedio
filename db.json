@@ -72,7 +72,7 @@
     },
     {
       "id": 3,
-      "nomeRemedio": "Remédio ",
+      "nomeRemedio": "Remédio 3",
       "hora": "13:00",
       "diasSemana": [
         {
@@ -109,7 +109,7 @@
         }
       ]
     },
-        
+
     {
       "id": 4,
       "nomeRemedio": "Remédio 4",

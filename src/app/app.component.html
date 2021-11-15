@@ -5,7 +5,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm p-0 d-flex justify-content-center" *ngFor="let lembrete of lembretes">
-        <lembretes [lembrete]="lembrete" (reload)="reloadLembretes()"></lembretes>
+        <lembretes [lembrete]="lembrete"></lembretes>
+      </div>
+      <div class="col-sm p-0 d-flex justify-content-center" [hidden]="lembretes.length != 0">
+        <p>Add um lembrete!</p>
       </div>
     </div>
   </div>

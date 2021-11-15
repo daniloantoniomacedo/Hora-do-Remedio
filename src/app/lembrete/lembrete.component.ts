@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { DiasDaSemana } from '../dias-da-semana';
@@ -13,8 +13,6 @@ import { Lembrete } from '../lembrete';
 export class LembretesComponent implements OnInit, OnDestroy {
 
   @Input() lembrete!: Lembrete;
-
-  @Output() reload: EventEmitter<boolean> = new EventEmitter();
 
   subscription?: Subscription;
 
@@ -40,9 +38,8 @@ export class LembretesComponent implements OnInit, OnDestroy {
   }
 
   excluirLembrete(): void {
-    this.subscription = this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
-    this.reload.emit(true);
-    //window.location.reload();
+    this.subscription = this.subscription = this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
+    window.location.reload();
   }
 
   ngOnDestroy(): void {
