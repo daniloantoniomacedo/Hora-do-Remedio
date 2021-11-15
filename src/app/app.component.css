@@ -3,6 +3,23 @@ header {
     display: flex;   
 }
 
+h1 {
+    font-size: 30px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 .head-img{
     width: 75px;
     height: 75px;
@@ -11,4 +28,49 @@ header {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 5px;
+}
+
+.body-img{
+    margin-top: 4px;
+    width: 45px;
+    height: 45px;
+}
+
+.msg-not-found{
+    display: flex;
+    margin-top: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: rgba(80, 200, 239, 0.4);
+    border: none;
+    border-radius: 25px;
+    min-height: 250px;
+    width: 600px;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
+    border-radius: 25px;
+    min-height: 40px;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.botao:active{
+    background-color: rgb(165, 233, 253);
+}
+
+.btn-default {
+    background-color: rgba(80, 200, 239, 0.8);
 }

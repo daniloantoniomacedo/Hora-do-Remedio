@@ -7,8 +7,14 @@
       <div class="col-sm p-0 d-flex justify-content-center" *ngFor="let lembrete of lembretes">
         <lembretes [lembrete]="lembrete"></lembretes>
       </div>
-      <div class="col-sm p-0 d-flex justify-content-center" [hidden]="lembretes.length != 0">
-        <p>Add um lembrete!</p>
+      <div class="col-sm p-0 d-flex justify-content-center" *ngIf="lembretes.length == 0">
+        <div class="card msg-not-found">
+          <img class="body-img" src="../assets/img/lupa-quebrada.jpg"> 
+          <h1>Nenhum lembrete encontrado</h1>
+          <h2>Adicione um lembrete!</h2>
+          <p>Seus lembretes não aparecem? Teste a cenexão!</p>
+          <button type="button" class="botao btn-default">Testar conexão</button>
+        </div>
       </div>
     </div>
   </div>
