@@ -1,0 +1,23 @@
+<div class="col d-flex flex-column justify-content-center">
+  <button type="button" (click) = "showMenu()" class="card lembrete flex-column align-items-center justify-content-center">
+    <p>{{ lembrete?.nomeRemedio }}</p>
+    <p class="textHora">{{ lembrete?.hora }}</p>
+    <div class="d-flex flex-row justify-content-center">
+      <p class="mx-2" *ngFor="let dia of lembrete?.diasSemana" [ngClass]="{ diaNaoSelecionado: dia.selecionado }">
+        {{ diasDaSemanaMap.get(dia.index) }}
+      </p>
+    </div>
+  </button>
+  <div class="row" [hidden]="isShowMenu">
+    <div class="col-6 p-0 m-0 d-flex justify-content-end">
+      <button type="button" class="botao btn-default">
+        <img class="botao-img" src="../../assets/img/editar.jpg" />
+      </button>
+    </div>
+    <div class="col-6 p-0 m-0 d-flex justify-content-start">
+      <button type="button" class="botao btn-excluir" (click)="excluirLembrete()" >
+        <img class="botao-img" src="../../assets/img/lixeira.jpg" />
+      </button>
+    </div>
+  </div>
+</div>

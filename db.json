@@ -1,0 +1,184 @@
+{
+  "lembretes": [
+    {
+      "id": 1,
+      "nomeRemedio": "Remédio 1",
+      "hora": "14:00",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": true
+        },
+        {
+          "index": 3,
+          "selecionado": false
+        },
+        {
+          "index": 4,
+          "selecionado": true
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nomeRemedio": "Remédio 2",
+      "hora": "14:00",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": true
+        },
+        {
+          "index": 3,
+          "selecionado": false
+        },
+        {
+          "index": 4,
+          "selecionado": true
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nomeRemedio": "Remédio ",
+      "hora": "13:00",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": false
+        },
+        {
+          "index": 3,
+          "selecionado": true
+        },
+        {
+          "index": 4,
+          "selecionado": false
+        },
+        {
+          "index": 4,
+          "selecionado": false
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": false
+        }
+      ]
+    },
+        
+    {
+      "id": 4,
+      "nomeRemedio": "Remédio 4",
+      "hora": "13:00",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": false
+        },
+        {
+          "index": 3,
+          "selecionado": true
+        },
+        {
+          "index": 4,
+          "selecionado": false
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nomeRemedio": "Remédio 5",
+      "hora": "15:00",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": false
+        },
+        {
+          "index": 3,
+          "selecionado": true
+        },
+        {
+          "index": 4,
+          "selecionado": false
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": false
+        }
+      ]
+    }
+  ]
+}

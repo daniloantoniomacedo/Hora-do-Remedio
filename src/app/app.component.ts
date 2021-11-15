@@ -1,43 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, Subscription } from 'rxjs';
+import { Lembrete } from './lembrete';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy{
 
-  domingo: Dia = new Dia(DiasDaSemana.Segunda, false);
-  segunda: Dia = new Dia(DiasDaSemana.Terca, true);
-  terca: Dia = new Dia(DiasDaSemana.Quarta, false);   
-  quarta: Dia = new Dia(DiasDaSemana.Quinta, true); 
-  quinta: Dia = new Dia(DiasDaSemana.Quinta, false); 
-  sexta: Dia = new Dia(DiasDaSemana.Sexta, true);
-  sabado: Dia = new Dia(DiasDaSemana.Sabado, false);
-
-  getSemana(domingo: Dia, segunda: Dia, terca: Dia, quarta: Dia, quinta: Dia, sexta: Dia, sabado: Dia): Dia[] {
-    return [domingo, segunda, terca, quarta, quinta, sexta, sabado]
-  };
-
-  diasDaSemana = this.getSemana(this.domingo, this.segunda, this.terca, this.quarta, this.quinta, this.sexta, this.sabado);
+  lembretes: Lembrete[] = [];
   
-}
+  getLembretesSubscription?: Subscription
 
-enum DiasDaSemana {
-  Segunda = 'S',
-  Terca = 'T',
-  Quarta = 'Q',
-  Quinta = 'Q',
-  Sexta = 'S',
-  Sabado = 'S'
-}
+  constructor(private http: HttpClient){}
 
-class Dia {
-  primeiraLetra: DiasDaSemana;
-  selecionado: boolean;
-
-  constructor(primeiraLetra: DiasDaSemana, selecionado: boolean){
-    this.primeiraLetra = primeiraLetra;
-    this.selecionado = selecionado;
+  ngOnInit(): void {
+    this.getLembretesSubscription = this.getLembretes().subscribe(lembretes => this.lembretes = lembretes);
   }
+
+  getLembretes(): Observable<Lembrete[]> {
+    return this.http.get<Lembrete[]>(environment.lembretesUrl)
+  }
+
+  reloadLembretes(){
+    this.lembretes = [];
+    this.ngOnInit();
+  }
+
+  ngOnDestroy(): void {
+    this.getLembretesSubscription?.unsubscribe();
+  }
+
 }

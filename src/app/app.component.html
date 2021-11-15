@@ -1,21 +1,11 @@
 <header>
-  <img class="head-img" src="../assets/img/frasco-de-remedio.jpg">
+  <img class="head-img" src="../assets/img/frasco-de-remedio.jpg" />
 </header>
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm p-0">
-        <div class="card lembrete">
-          <div class="card-body p-2">
-            <p>Remédio A</p>
-            <p class="textHora">16:00</p>
-            <div class="d-flex flex-row justify-content-center">
-              <p class="mx-2" *ngFor="let dia of diasDaSemana" [ngClass] = "{ diaNaoSelecionado: dia.selecionado }">
-                {{ dia.primeiraLetra }}
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="col-sm p-0 d-flex justify-content-center" *ngFor="let lembrete of lembretes">
+        <lembretes [lembrete]="lembrete" (reload)="reloadLembretes()"></lembretes>
       </div>
     </div>
   </div>

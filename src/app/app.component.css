@@ -1,10 +1,6 @@
-header{
+header {
     background-color: rgba(80, 200, 239, 100);
     display: flex;   
-}
-
-p {
- margin: 0;
 }
 
 .head-img{
@@ -15,28 +11,4 @@ p {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 5px;
-}
-
-.lembrete{
-    margin: 16px;
-    padding: 0;
-    background-color: rgba(80, 200, 239, 0.4);
-    border: none;
-    border-radius: 25px;
-    height: 138px;
-    width: 343px;
-    text-align: center;
-    font-size: 24px;
-}
-
-.textHora{
-    font-size: 48px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.diaNaoSelecionado{
-    color: white;
 }
