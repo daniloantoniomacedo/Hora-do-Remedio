@@ -56,13 +56,10 @@ p {
 
 .botao {
     display: flex;
-    margin-top: 4px;
-    margin-bottom: 4px;
     padding: 0;
     border: none;
     border-radius: 25px;
     min-height: 40px;
-    width: 50%;
     text-align: center;
     justify-content: center;
 }
@@ -72,5 +69,25 @@ p {
 }
 
 .btn-default {
+    background-color: rgba(80, 200, 239, 0.8);
+    width: 50%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.btn-add {
+    background-color: rgba(80, 200, 239, 0.8);
+    width: 100%;
+    margin-top: 8px;
+    padding: 0;
+}
+
+.btn-user {
+    background-color: rgba(80, 200, 239, 0.4);
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-user:active {
     background-color: rgba(80, 200, 239, 0.8);
 }

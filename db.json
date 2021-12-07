@@ -85,19 +85,15 @@
         },
         {
           "index": 2,
-          "selecionado": false
-        },
-        {
-          "index": 3,
           "selecionado": true
         },
         {
-          "index": 4,
+          "index": 3,
           "selecionado": false
         },
         {
           "index": 4,
-          "selecionado": false
+          "selecionado": true
         },
         {
           "index": 5,
@@ -105,11 +101,10 @@
         },
         {
           "index": 6,
-          "selecionado": false
+          "selecionado": true
         }
       ]
     },
-
     {
       "id": 4,
       "nomeRemedio": "Remédio 4",
