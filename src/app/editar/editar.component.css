@@ -1,0 +1,154 @@
+header {
+    background-color: rgba(80, 200, 239, 100);
+    display: flex;   
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.head-img{
+    width: 65px;
+    height: 65px;
+    display: block;   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.body-img{
+    margin-top: 4px;
+    width: 45px;
+    height: 45px;
+}
+
+.botao {
+    display: flex;
+    padding: 0;
+    border: none;
+    border-radius: 25px;
+    min-height: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.botao:active{
+    background-color: rgb(165, 233, 253);
+}
+
+.btn-default {
+    background-color: rgba(80, 200, 239, 0.8);
+    width: 50%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.lembrete{
+    display: flex;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: rgba(80, 200, 239, 0.4);
+    border: none;
+    border-radius: 25px;
+    height: 155px;
+    width: 310px;
+    font-size: 24px;
+}
+
+.textHora{
+    font-size: 48px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.diaNaoSelecionado{
+    color: white;
+}
+
+.botao {
+    margin-top: 4px;
+    padding: 0;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+}
+
+.btn-default:active{
+    background-color: rgb(165, 233, 253);
+}
+
+.btn-default {
+    width: 154px;
+    background-color: rgba(80, 200, 239, 0.8);
+}
+
+.btn-ok {
+    width: 310px;
+    background-color: rgb(148, 253, 148);
+}
+
+.btn-ok:active {
+    background-color: rgb(172, 255, 172);
+}
+
+.botao-img{
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.input {
+    font-size: 24px;
+    text-align: center;
+    background: none;
+    border: none;
+    border-radius: 25px;
+    width: fit-content;
+    height: 20px;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.btn-hora {
+    background-color: rgba(80, 200, 239, 1);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    border-radius: 25px;
+    width: 45px;
+    height: 10px;
+    margin-left: 2px;
+}
+
+.btn-hora:active {
+    background-color: rgb(165, 233, 253);
+}
+
+.hora-img{
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+}

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { DiasDaSemana } from '../dias-da-semana';
@@ -28,7 +29,7 @@ export class LembretesComponent implements OnInit, OnDestroy {
     [6, DiasDaSemana.Sabado]
   ]);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -38,8 +39,12 @@ export class LembretesComponent implements OnInit, OnDestroy {
   }
 
   excluirLembrete(): void {
-    this.subscription = this.subscription = this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
+    this.subscription = this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
     window.location.reload();
+  }
+
+  goToEdit(): void {
+    this.router.navigate(['/editar/'+this.lembrete.id]);
   }
 
   ngOnDestroy(): void {

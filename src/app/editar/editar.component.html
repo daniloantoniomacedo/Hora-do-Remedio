@@ -1,0 +1,31 @@
+<header>
+    <img class="head-img" src="../../assets/img/editar.jpg" />
+</header>
+<body>
+    <div class="col d-flex flex-column justify-content-center align-items-center">
+        <div class="card lembrete flex-column align-items-center justify-content-center">
+          <input type="text" class="form-control input" value="{{ lembrete?.nomeRemedio }}"/>
+          
+            <div class="row d-flex flex-row justify-content-center align-items-center">
+                <button type="button" class="btn-hora" (click)="ajustarHorario('hora', 'adicionar')"><img class="hora-img" src="../../assets/img/mais.jpg"/></button>
+                <button type="button" class="btn-hora" (click)="ajustarHorario('minuto', 'adicionar')"><img class="hora-img" src="../../assets/img/mais.jpg"/></button>
+                <p class="textHora">{{ lembrete?.hora }}</p>
+                <button type="button" class="btn-hora" (click)="ajustarHorario('hora', 'subtrair')"><img class="hora-img" src="../../assets/img/menos.jpg"/></button>
+                <button type="button" class="btn-hora" (click)="ajustarHorario('minuto', 'subtrair')"><img class="hora-img" src="../../assets/img/menos.jpg"/></button>
+            </div>
+
+          <div class="d-flex flex-row justify-content-center">
+            <p class="mx-2" *ngFor="let dia of lembrete?.diasSemana" [ngClass]="{ diaNaoSelecionado: dia.selecionado }">
+              {{ diasDaSemanaMap.get(dia.index) }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col p-0 m-0 d-flex justify-content-center">
+            <button type="button" class="botao btn-ok">
+              <img class="botao-img" src="../../assets/img/concluido.jpg" />
+            </button>
+          </div>
+        </div>
+      </div>
+</body>
