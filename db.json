@@ -4,6 +4,10 @@
       "id": 1,
       "nomeRemedio": "Remédio 1",
       "hora": "14:00",
+      "dataTermino": "2021-09-18",
+      "qtdTotal": 15,
+      "qtdDose": 1,
+      "und": "und",
       "diasSemana": [
         {
           "index": 0,
@@ -39,6 +43,10 @@
       "id": 2,
       "nomeRemedio": "Remédio 2",
       "hora": "14:00",
+      "dataTermino": "2021-09-18",
+      "qtdTotal": 15,
+      "qtdDose": 1,
+      "und": "und",
       "diasSemana": [
         {
           "index": 0,
@@ -74,6 +82,10 @@
       "id": 3,
       "nomeRemedio": "Remédio 3",
       "hora": "13:00",
+      "dataTermino": "2021-09-18",
+      "qtdTotal": 15,
+      "qtdDose": 1,
+      "und": "und",
       "diasSemana": [
         {
           "index": 0,
@@ -109,6 +121,10 @@
       "id": 4,
       "nomeRemedio": "Remédio 4",
       "hora": "13:00",
+      "dataTermino": "2021-09-18",
+      "qtdTotal": 15,
+      "qtdDose": 1,
+      "und": "und",
       "diasSemana": [
         {
           "index": 0,
@@ -144,6 +160,10 @@
       "id": 5,
       "nomeRemedio": "Remédio 5",
       "hora": "15:00",
+      "dataTermino": "2021-09-18",
+      "qtdTotal": 15,
+      "qtdDose": 1,
+      "und": "und",
       "diasSemana": [
         {
           "index": 0,

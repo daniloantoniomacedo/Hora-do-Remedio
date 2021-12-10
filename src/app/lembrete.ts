@@ -5,12 +5,20 @@ export class Lembrete {
   id!: number;
   nomeRemedio: string;
   hora: string;
+  dataTermino: string;
+  qtdTotal: string;
+  qtdDose: string;
+  und: string;
   diasSemana: Dia[];
 
-  constructor(nomeRemedio: string, hora: Date, diasSemana: Dia[]){
+  constructor(nomeRemedio: string, hora: Date, diasSemana: Dia[], dataTermino: string, qtdTotal: string, qtdDose: string, und: string){
     this.nomeRemedio = nomeRemedio;
     this.hora = this.formatarData(hora, 'HH:mm');
     this.diasSemana = diasSemana;
+    this.dataTermino = dataTermino;
+    this.qtdTotal = qtdTotal;
+    this.qtdDose = qtdDose;
+    this.und = und;
   }
 
   formatarData(date: Date, formato: string): string {

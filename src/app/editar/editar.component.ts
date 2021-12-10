@@ -19,6 +19,8 @@ export class EditarComponent implements OnInit {
 
   subscription?: Subscription;
 
+  bordaVermelha: boolean = false;
+
   diasDaSemanaMap = new Map<number, string>([
     [0, DiasDaSemana.Domingo],
     [1, DiasDaSemana.Segunda],
@@ -50,7 +52,7 @@ export class EditarComponent implements OnInit {
   }
 
   ajustarHorario(tipo: string, operacao: string): void {
-    let splitTime: string[] | undefined =  this.splitTime();
+    let splitTime: string[] | undefined | null =  this.splitTime();
     if(splitTime){
       let time: number = 0;
       
@@ -62,17 +64,47 @@ export class EditarComponent implements OnInit {
       if(tipo == 'hora') limite = 23;
       if(tipo == 'minuto') limite = 59;
       
-      if(time < limite && time >= 0){
-        if(operacao == 'adicionar') ++time;
-        if(operacao == 'subtrair') --time;
-      }else if(time > limite) {
-        time = 0;
+      if(operacao == 'soma'){
+        if(time < limite){
+          ++time;
+        }else {
+          time = 0;
+        }
+      }
+
+      if(operacao == 'subtracao'){
+        if(time > 0){
+          --time;
+        }else {
+          time = limite;
+        }
       }
 
       if(tipo == 'hora') this.lembrete.hora = this.ajustarZero(time) + ':' + splitTime[1];
       if(tipo == 'minuto') this.lembrete.hora = splitTime[0] + ':' + this.ajustarZero(time);
       
+      splitTime = null;
     }
+  }
+
+  selecionarDia(index: number): void {
+    let selecionado: boolean = this.lembrete.diasSemana[index].selecionado;
+    this.lembrete.diasSemana[index].selecionado = !selecionado;
+  }
+
+  setQtdTotal(valor: string | undefined): void {
+    if(valor){
+      this.lembrete.qtdTotal = valor;
+      this.verificarQtd(+valor);
+    }
+  }
+
+  verificarQtd(valor: number): void {
+    if(valor <= 0){
+      this.bordaVermelha = true;
+      console.log('oi');
+      
+    }  
   }
 
   ngOnDestroy(): void {
