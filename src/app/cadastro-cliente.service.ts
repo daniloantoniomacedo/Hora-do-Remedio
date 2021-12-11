@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CadastroClienteService {
-  private readonly API: string = `${environment.lembretesUrl}`;
+  private readonly API: string = `${environment.usuarios}`;
 
   constructor(private http: HttpClient) {}
 

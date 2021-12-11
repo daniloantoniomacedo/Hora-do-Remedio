@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  lembretesUrl: 'http://localhost:3000/lembretes/'
+  lembretesUrl: 'http://localhost:3000/lembretes/',
+  usuarios: 'http://localhost:3000/usuarios'
 };
 
 /*

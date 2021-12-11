@@ -195,5 +195,20 @@
       "und": "und",
       "id": 7
     }
+  ],
+  "usuarios": [
+    {
+      "nome": "Danilo",
+      "cpf": "85963219504",
+      "email": "danilantonio@email.com",
+      "contatoCelular": "71991078397",
+      "dataNascimento": "1997-06-02",
+      "renda": "100.00",
+      "relacionamento": "Solteiro(a)",
+      "senha": "8913$DaMa",
+      "comfirmeSenha": "8913$DaMa",
+      "cep": "12345697",
+      "id": 1
+    }
   ]
 }
