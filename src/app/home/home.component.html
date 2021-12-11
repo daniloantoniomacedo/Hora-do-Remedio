@@ -2,30 +2,36 @@
     <img class="head-img" src="../assets/img/frasco-de-remedio.jpg" />
 </header>
 <body>
-  <div class="container-fluid">
-    <div class="row p-0">
-      <div class="col-sm-10">
-        <button class="botao btn-add" (click) = "irParaCadastro()">
-          <img class="body-img" src="../assets/img/adicionar.jpg" />
-        </button>
+  <div class="d-flex justify-content-center" *ngIf="!carregado">
+    <p>Carregando lembretes...</p>
+  </div>
+  <div *ngIf="carregado"> 
+    <div class="container-fluid">
+      <div class="row p-0">
+        <div class="col-sm-10">
+          <button class="botao btn-add" (click) = "irParaCadastro()">
+            <img class="body-img" src="../assets/img/adicionar.jpg" />
+          </button>
+        </div>
+        <div class="col-sm-2">
+          <button class="botao btn-user" (click) = "irParaUsuario()">
+            <img class="body-img" src="../assets/img/usuario.jpg" />
+          </button>
+        </div>
       </div>
-      <div class="col-sm-2">
-        <button class="botao btn-user">
-          <img class="body-img" src="../assets/img/usuario.jpg" />
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm p-0 d-flex justify-content-center" *ngFor="let lembrete of lembretes">
-        <lembretes [lembrete]="lembrete"></lembretes>
-      </div>
-      <div class="col-sm p-0 d-flex justify-content-center" *ngIf="lembretes.length == 0">
-        <div class="card msg-not-found">
-          <img class="body-img" src="../assets/img/lupa-quebrada.jpg"> 
-          <h1>Nenhum lembrete encontrado</h1>
-          <h2>Adicione um lembrete!</h2>
-          <p>Seus lembretes não aparecem? Teste a cenexão.</p>
-          <button type="button" class="botao btn-default" (click)="testarConexao()">Testar conexão</button>
+      <div class="row">
+        <div class="col-sm p-0 d-flex justify-content-center" *ngFor="let lembrete of lembretes">
+          <lembretes [lembrete]="lembrete"></lembretes>
+        </div>
+        
+        <div class="col-sm p-0 d-flex justify-content-center" *ngIf="lembretes.length == 0">
+          <div class="card msg-not-found">
+            <img class="body-img" src="../assets/img/lupa-quebrada.jpg"> 
+            <h1>Nenhum lembrete encontrado</h1>
+            <h2>Adicione um lembrete!</h2>
+            <p>Seus lembretes não aparecem? Teste a cenexão.</p>
+            <button type="button" class="botao btn-default" (click)="testarConexao()">Testar conexão</button>
+          </div>
         </div>
       </div>
     </div>

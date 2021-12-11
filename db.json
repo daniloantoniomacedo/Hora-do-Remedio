@@ -1,13 +1,8 @@
 {
   "lembretes": [
     {
-      "id": 1,
-      "nomeRemedio": "Rémedio 206",
-      "hora": "16:06",
-      "dataTermino": "2021-12-16",
-      "qtdTotal": 16,
-      "qtdDose": 6,
-      "und": "und",
+      "nomeRemedio": "Cataflam",
+      "hora": "15:00",
       "diasSemana": [
         {
           "index": 0,
@@ -15,15 +10,15 @@
         },
         {
           "index": 1,
-          "selecionado": true
-        },
-        {
-          "index": 2,
           "selecionado": false
         },
         {
-          "index": 3,
+          "index": 2,
           "selecionado": true
+        },
+        {
+          "index": 3,
+          "selecionado": false
         },
         {
           "index": 4,
@@ -37,20 +32,20 @@
           "index": 6,
           "selecionado": true
         }
-      ]
-    },
-    {
-      "id": 2,
-      "nomeRemedio": "Remédio 2",
-      "hora": "14:00",
-      "dataTermino": "2021-09-18",
-      "qtdTotal": 15,
+      ],
+      "dataTermino": "2021-12-31",
+      "qtdTotal": 30,
       "qtdDose": 1,
       "und": "und",
+      "id": 1
+    },
+    {
+      "nomeRemedio": "DorFlex",
+      "hora": "15:20",
       "diasSemana": [
         {
           "index": 0,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 1,
@@ -58,11 +53,11 @@
         },
         {
           "index": 2,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 3,
-          "selecionado": false
+          "selecionado": true
         },
         {
           "index": 4,
@@ -70,73 +65,34 @@
         },
         {
           "index": 5,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 6,
-          "selecionado": true
+          "selecionado": false
         }
-      ]
-    },
-    {
-      "id": 3,
-      "nomeRemedio": "Remédio 3",
-      "hora": "13:00",
-      "dataTermino": "2021-09-18",
-      "qtdTotal": 15,
-      "qtdDose": 1,
+      ],
+      "dataTermino": "2021-12-31",
+      "qtdTotal": 90,
+      "qtdDose": 2,
       "und": "und",
-      "diasSemana": [
-        {
-          "index": 0,
-          "selecionado": true
-        },
-        {
-          "index": 1,
-          "selecionado": true
-        },
-        {
-          "index": 2,
-          "selecionado": true
-        },
-        {
-          "index": 3,
-          "selecionado": false
-        },
-        {
-          "index": 4,
-          "selecionado": true
-        },
-        {
-          "index": 5,
-          "selecionado": true
-        },
-        {
-          "index": 6,
-          "selecionado": true
-        }
-      ]
+      "id": 2
     },
     {
-      "id": 4,
-      "nomeRemedio": "Remédio 4",
-      "hora": "13:00",
-      "dataTermino": "2021-09-18",
-      "qtdTotal": 15,
-      "qtdDose": 1,
-      "und": "und",
+      "nomeRemedio": "Amoxicilina",
+      "hora": "01:24",
       "diasSemana": [
         {
           "index": 0,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 1,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 2,
-          "selecionado": false
+          "selecionado": true
         },
         {
           "index": 3,
@@ -148,30 +104,30 @@
         },
         {
           "index": 5,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 6,
-          "selecionado": false
+          "selecionado": true
         }
-      ]
-    },
-    {
-      "id": 5,
-      "nomeRemedio": "Remédio 5",
-      "hora": "01:40",
-      "dataTermino": "2021-12-29",
+      ],
+      "dataTermino": "2021-12-19",
       "qtdTotal": 9,
-      "qtdDose": 5,
+      "qtdDose": 1,
       "und": "und",
+      "id": 3
+    },
+    {
+      "nomeRemedio": "Neosaldina",
+      "hora": "08:50",
       "diasSemana": [
         {
           "index": 0,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 1,
-          "selecionado": false
+          "selecionado": true
         },
         {
           "index": 2,
@@ -180,6 +136,45 @@
         {
           "index": 3,
           "selecionado": true
+        },
+        {
+          "index": 4,
+          "selecionado": true
+        },
+        {
+          "index": 5,
+          "selecionado": false
+        },
+        {
+          "index": 6,
+          "selecionado": true
+        }
+      ],
+      "dataTermino": "2021-12-30",
+      "qtdTotal": 20,
+      "qtdDose": 1,
+      "und": "und",
+      "id": 4
+    },
+    {
+      "nomeRemedio": "Neosoro",
+      "hora": "16:55",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": true
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": false
+        },
+        {
+          "index": 3,
+          "selecionado": false
         },
         {
           "index": 4,
@@ -193,7 +188,12 @@
           "index": 6,
           "selecionado": true
         }
-      ]
+      ],
+      "dataTermino": "2022-01-05",
+      "qtdTotal": 1000,
+      "qtdDose": 2,
+      "und": "und",
+      "id": 5
     }
   ]
 }

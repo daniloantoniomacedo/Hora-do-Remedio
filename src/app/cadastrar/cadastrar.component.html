@@ -1,10 +1,10 @@
 <header>
-    <img class="head-img" src="../../assets/img/editar.jpg" />
+    <img class="head-img" src="../../assets/img/adicionar.jpg" />
 </header>
 <body>
     <div class="col d-flex flex-column justify-content-center align-items-center">
         <div class="card lembrete flex-column align-items-center justify-content-center">
-          <input [(ngModel)]="nomeRemedio" type="text" class="form-control input campoBranco mb-2"/>
+          <input [(ngModel)]="nomeRemedio" type="text" class="form-control input campoBranco mb-2" placeholder="Inserir nome do remédio"/>
           
             <div class="row d-flex flex-row justify-content-center align-items-center">
                 <button type="button" class="btn-hora" (click)="ajustarHorario('hora', 'soma')"><img class="hora-img" src="../../assets/img/mais.jpg"/></button>
@@ -55,6 +55,14 @@
             </button>
           </div>
         </div>
+
+        <div class="row">
+            <div class="col p-0 m-0 d-flex justify-content-center">
+              <button type="button" class="botao btn-default" (click) = "retornarHome()">
+                <img class="botao-img" src="../../assets/img/voltar.jpg" />
+              </button>
+            </div>
+          </div>
       </div>
 </body>
 

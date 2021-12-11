@@ -1,0 +1,10 @@
+<div class="alert alert-{{ property }} no-margin" role="alert">
+  {{ message }}
+  <button
+    type="button"
+    class="close pull-right"
+    (click)="modalRef.hide()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

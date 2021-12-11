@@ -144,7 +144,7 @@ export class EditarComponent implements OnInit {
       this.openModal("Selecione pelo menos um dia da semana.");
 
     }else{
-      this.subscription = this.http.put(environment.lembretesUrl+this.id, this.lembrete).subscribe();
+      this.http.put(environment.lembretesUrl+this.id, this.lembrete).subscribe();
       this.retornarHome();
     }
 
@@ -162,7 +162,7 @@ export class EditarComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+    //this.subscription?.unsubscribe();
   }
 
 }

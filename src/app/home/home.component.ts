@@ -20,10 +20,24 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   modal?: BsModalRef;
 
+  carregado: boolean = false;
+
   constructor(private http: HttpClient, private modalService: BsModalService, private router: Router){}
 
   ngOnInit(): void {
+    this.mostrarCarregando();
     this.getLembretesSubscription = this.getLembretes();
+  }
+
+  async mostrarCarregando(){
+    await this.delay(2);
+    this.carregado = true;
+  }
+
+  delay(n: number){
+    return new Promise(function(resolve){
+        setTimeout(resolve,n*1000);
+    });
   }
 
   getLembretes(): Subscription {
@@ -40,6 +54,10 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   irParaCadastro(): void {
     this.router.navigate(['cadastrar']);
+  }
+
+  irParaUsuario(): void {
+    this.router.navigate(['usuario']);
   }
 
   ngOnDestroy(): void {

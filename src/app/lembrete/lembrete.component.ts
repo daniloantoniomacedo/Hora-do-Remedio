@@ -39,7 +39,7 @@ export class LembretesComponent implements OnInit, OnDestroy {
   }
 
   excluirLembrete(): void {
-    this.subscription = this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
+    this.http.delete(environment.lembretesUrl+this.lembrete.id).subscribe();
     window.location.reload();
   }
 
@@ -48,7 +48,7 @@ export class LembretesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+    //this.subscription?.unsubscribe();
   }
 
 }

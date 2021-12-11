@@ -1,0 +1,22 @@
+<label>{{ messageLabel }}</label>
+<input
+  [type]="type"
+  [attr.label]="label"
+  [class]="class"
+  [placeholder]="placeHolder"
+  [readonly]="!!readOnly"
+  [(ngModel)]="innerValue"
+  (blur)="onTouchedCallBack()"
+  [ngClass]="{ redBorder: verifyInvalidTouched() }"
+  [mask]="mask"
+  [prefix]="prefix"
+  thousandSeparator="."
+/>
+<!-- dois pontos de exclamação transformam para o tipo boolean com valor true, caso a variável não seja do tipo boolean. Se já for do tipo boolen, seu valor não é alterado  -->
+<error-menssage
+  [form]="form"
+  [field]="field"
+  [otherField]="otherField"
+  [minlength]="minlength"
+  [maxlength]="maxlength"
+></error-menssage>

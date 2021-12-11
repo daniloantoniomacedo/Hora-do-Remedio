@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -9,6 +9,7 @@ import { Dia } from '../dia';
 import { DiasDaSemana } from '../dias-da-semana';
 import { Lembrete } from '../lembrete';
 import { PopUpComponent } from '../pop-up/pop-up.component';
+import { DiasSemana } from './DiasSemana';
 
 @Component({
   selector: 'app-cadastrar',
@@ -19,10 +20,16 @@ export class CadastrarComponent implements OnInit {
 
   subscription?: Subscription;
 
-  nomeRemedio: string = "Insira o nome";
+  nomeRemedio: string = "";
 
   diasDaSemana: Dia[] = [
-    new Dia(0, false)
+    new Dia(DiasSemana.Domingo, false),
+    new Dia(DiasSemana.Segunda, false),
+    new Dia(DiasSemana.Terca, false),
+    new Dia(DiasSemana.Quarta, false),
+    new Dia(DiasSemana.Quinta, false),
+    new Dia(DiasSemana.Sexta, false),
+    new Dia(DiasSemana.Sabado, false),
   ];
 
   dataTermino: string = this.formatarData(new Date(), "yyyy-MM-dd");
@@ -146,7 +153,7 @@ export class CadastrarComponent implements OnInit {
       this.openModal("Selecione pelo menos um dia da semana.");
 
     }else{
-      //this.subscription = this.http.put(environment.lembretesUrl+this.id, this.lembrete).subscribe();
+      this.http.post(environment.lembretesUrl, this.lembrete).subscribe();
       this.retornarHome();
     }
 
@@ -164,7 +171,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+    //this.subscription?.unsubscribe();
   }
 
 }

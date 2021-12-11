@@ -1,0 +1,9 @@
+label{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.redBorder{
+    border-color: red !important;
+    box-shadow: 0 0 0 0.2rem rgba(252, 38, 38, 0.25) !important;
+}

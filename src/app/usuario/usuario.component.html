@@ -1,0 +1,139 @@
+<header>
+    <img class="head-img" src="../../assets/img/usuario.jpg" />
+</header>
+<body>
+    <div class="lembrete container-fluid">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <form
+                class="row"
+                *ngIf="form != null"
+                [formGroup]="form"
+                (ngSubmit)="onSubmit()"
+            >
+                <div class="col-md-6">
+                <!--
+                <label for="nome">Informe seu nome completo</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Informe o seu nome completo"
+                    formControlName="nome"
+                />
+                <error-menssage field="nome" [form]="form.get('nome')"></error-menssage>
+                -->
+                <app-input
+                    messageLabel="Informe seu nome:"
+                    formControlName="nome"
+                    [form]="form?.get('nome')"
+                    field="nome"
+                    placeHolder="Digite seu nome completo aqui"
+                ></app-input>
+                </div>
+                <div class="col-md-6">
+                <app-input
+                    messageLabel="Informe seu número de celular:"
+                    formControlName="contatoCelular"
+                    [form]="form?.get('contatoCelular')"
+                    field="número do celular"
+                    placeHolder="(00) 00000-0000"
+                    mask="(00) 00000-0000"
+                    minlength="11"
+                ></app-input>
+                </div>
+
+                <div class="col-md-6">
+                <app-input
+                    messageLabel="Informe seu número de CPF:"
+                    formControlName="cpf"
+                    [form]="form?.get('cpf')"
+                    field="CPF"
+                    placeHolder="000.000.000-00"
+                    mask="000.000.000-00"
+                    minlength="11"
+                ></app-input>
+                </div>
+                <div class="col-md-6">
+                <app-input
+                    messageLabel="Informe sua data de Nascimento:"
+                    type="date"
+                    formControlName="dataNascimento"
+                    [form]="form?.get('dataNascimento')"
+                    field="data de nascimento"
+                    placeHolder="dd/mm/aaaa"
+                ></app-input>
+                </div>
+
+                <div class="col-md-6">
+                <app-input
+                    messageLabel="Informe seu email:"
+                    formControlName="email"
+                    type="email"
+                    [form]="form?.get('email')"
+                    field="email"
+                    placeHolder="seu_email@email.com"
+                ></app-input>
+                </div>
+                <div class="col-md-6">
+                <app-input
+                    messageLabel="Informe seu gasto mensal com saúde:"
+                    formControlName="renda"
+                    [form]="form?.get('renda')"
+                    field="renda"
+                    mask="separator.2"
+                    prefix="R$"
+                ></app-input>
+                </div>
+
+                <div class="col-md-3">
+                <app-input
+                    messageLabel="Cadastre sua senha:"
+                    type="password"
+                    formControlName="senha"
+                    [form]="form?.get('senha')"
+                    field="senha"
+                ></app-input>
+                </div>
+                <div class="col-md-3">
+                <app-input
+                    messageLabel="Corfirme sua senha:"
+                    type="password"
+                    formControlName="comfirmeSenha"
+                    [form]="form?.get('comfirmeSenha')"
+                    field="cofirme senha"
+                    otherField="senha"
+                ></app-input>
+                </div>
+                <div class="col-md-3">
+                <label>Informe seu estado civil:</label>
+                <select class="form-select"  formControlName="relacionamento">
+                    <option selected>Selecione</option>
+                    <option *ngFor="let relacionamento of relacionamentos">{{ relacionamento }}</option>
+                </select>
+                <error-menssage field="estado civil" [form]="form" ></error-menssage>
+                </div>
+                <div class="col-md-3">
+                <app-input
+                    messageLabel="Informe seu CEP:"
+                    formControlName="cep"
+                    [form]="form?.get('cep')"
+                    field="CEP"
+                    mask="00000-000"
+                ></app-input>
+                </div>
+
+                <div class="col col-12 d-flex justify-content-center my-3">
+                <button
+                    type="submit"
+                    class="btn btn-light"
+                    [disabled]="!form.valid"
+                    (ngSubmit)="onSubmit()"
+                >
+                    Enviar
+                </button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
