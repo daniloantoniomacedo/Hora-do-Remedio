@@ -1,45 +1,6 @@
 {
   "lembretes": [
     {
-      "nomeRemedio": "Cataflam",
-      "hora": "15:00",
-      "diasSemana": [
-        {
-          "index": 0,
-          "selecionado": true
-        },
-        {
-          "index": 1,
-          "selecionado": false
-        },
-        {
-          "index": 2,
-          "selecionado": true
-        },
-        {
-          "index": 3,
-          "selecionado": false
-        },
-        {
-          "index": 4,
-          "selecionado": true
-        },
-        {
-          "index": 5,
-          "selecionado": false
-        },
-        {
-          "index": 6,
-          "selecionado": true
-        }
-      ],
-      "dataTermino": "2021-12-31",
-      "qtdTotal": 30,
-      "qtdDose": 1,
-      "und": "und",
-      "id": 1
-    },
-    {
       "nomeRemedio": "DorFlex",
       "hora": "15:20",
       "diasSemana": [
@@ -118,45 +79,6 @@
       "id": 3
     },
     {
-      "nomeRemedio": "Neosaldina",
-      "hora": "08:50",
-      "diasSemana": [
-        {
-          "index": 0,
-          "selecionado": false
-        },
-        {
-          "index": 1,
-          "selecionado": true
-        },
-        {
-          "index": 2,
-          "selecionado": false
-        },
-        {
-          "index": 3,
-          "selecionado": true
-        },
-        {
-          "index": 4,
-          "selecionado": true
-        },
-        {
-          "index": 5,
-          "selecionado": false
-        },
-        {
-          "index": 6,
-          "selecionado": true
-        }
-      ],
-      "dataTermino": "2021-12-30",
-      "qtdTotal": 20,
-      "qtdDose": 1,
-      "und": "und",
-      "id": 4
-    },
-    {
       "nomeRemedio": "Neosoro",
       "hora": "16:55",
       "diasSemana": [
@@ -194,6 +116,84 @@
       "qtdDose": 2,
       "und": "und",
       "id": 5
+    },
+    {
+      "nomeRemedio": "Neosaldina",
+      "hora": "07:40",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": false
+        },
+        {
+          "index": 1,
+          "selecionado": false
+        },
+        {
+          "index": 2,
+          "selecionado": true
+        },
+        {
+          "index": 3,
+          "selecionado": false
+        },
+        {
+          "index": 4,
+          "selecionado": false
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": true
+        }
+      ],
+      "dataTermino": "2021-12-31",
+      "qtdTotal": 10,
+      "qtdDose": 2,
+      "und": "und",
+      "id": 6
+    },
+    {
+      "nomeRemedio": "Alcaftadina",
+      "hora": "12:30",
+      "diasSemana": [
+        {
+          "index": 0,
+          "selecionado": false
+        },
+        {
+          "index": 1,
+          "selecionado": true
+        },
+        {
+          "index": 2,
+          "selecionado": false
+        },
+        {
+          "index": 3,
+          "selecionado": true
+        },
+        {
+          "index": 4,
+          "selecionado": true
+        },
+        {
+          "index": 5,
+          "selecionado": true
+        },
+        {
+          "index": 6,
+          "selecionado": false
+        }
+      ],
+      "dataTermino": "2021-12-15",
+      "qtdTotal": 70,
+      "qtdDose": 9,
+      "und": "und",
+      "id": 7
     }
   ]
 }
