@@ -6,16 +6,16 @@ export class Lembrete {
   nomeRemedio: string;
   hora: string;
   dataTermino: string;
-  qtdTotal: string;
-  qtdDose: string;
+  qtdTotal: number;
+  qtdDose: number;
   und: string;
   diasSemana: Dia[];
 
-  constructor(nomeRemedio: string, hora: Date, diasSemana: Dia[], dataTermino: string, qtdTotal: string, qtdDose: string, und: string){
+  constructor(nomeRemedio: string, hora: Date, diasSemana: Dia[], dataTermino: Date, qtdTotal: number, qtdDose: number, und: string){
     this.nomeRemedio = nomeRemedio;
     this.hora = this.formatarData(hora, 'HH:mm');
     this.diasSemana = diasSemana;
-    this.dataTermino = dataTermino;
+    this.dataTermino = this.formatarData(dataTermino, "yyyy-MM-dd");
     this.qtdTotal = qtdTotal;
     this.qtdDose = qtdDose;
     this.und = und;

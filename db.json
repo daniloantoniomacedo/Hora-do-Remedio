@@ -2,11 +2,11 @@
   "lembretes": [
     {
       "id": 1,
-      "nomeRemedio": "Remédio 1",
-      "hora": "14:00",
-      "dataTermino": "2021-09-18",
-      "qtdTotal": 15,
-      "qtdDose": 1,
+      "nomeRemedio": "Rémedio 206",
+      "hora": "16:06",
+      "dataTermino": "2021-12-16",
+      "qtdTotal": 16,
+      "qtdDose": 6,
       "und": "und",
       "diasSemana": [
         {
@@ -19,11 +19,11 @@
         },
         {
           "index": 2,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 3,
-          "selecionado": false
+          "selecionado": true
         },
         {
           "index": 4,
@@ -31,7 +31,7 @@
         },
         {
           "index": 5,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 6,
@@ -159,10 +159,10 @@
     {
       "id": 5,
       "nomeRemedio": "Remédio 5",
-      "hora": "15:00",
-      "dataTermino": "2021-09-18",
-      "qtdTotal": 15,
-      "qtdDose": 1,
+      "hora": "01:40",
+      "dataTermino": "2021-12-29",
+      "qtdTotal": 9,
+      "qtdDose": 5,
       "und": "und",
       "diasSemana": [
         {
@@ -171,7 +171,7 @@
         },
         {
           "index": 1,
-          "selecionado": true
+          "selecionado": false
         },
         {
           "index": 2,
@@ -191,7 +191,7 @@
         },
         {
           "index": 6,
-          "selecionado": false
+          "selecionado": true
         }
       ]
     }

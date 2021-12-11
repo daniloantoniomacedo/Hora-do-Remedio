@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { Lembrete } from '../lembrete';
 import { environment } from 'src/environments/environment';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   modal?: BsModalRef;
 
-  constructor(private http: HttpClient, private modalService: BsModalService){}
+  constructor(private http: HttpClient, private modalService: BsModalService, private router: Router){}
 
   ngOnInit(): void {
     this.getLembretesSubscription = this.getLembretes();
@@ -35,6 +36,10 @@ export class HomeComponent implements OnInit, OnDestroy{
       this.modal = this.modalService.show(PopUpComponent);
       this.modal.content.msg = "Erro ao conectar o servidor! Tente novamente mais tarde."
     }
+  }
+
+  irParaCadastro(): void {
+    this.router.navigate(['cadastrar']);
   }
 
   ngOnDestroy(): void {

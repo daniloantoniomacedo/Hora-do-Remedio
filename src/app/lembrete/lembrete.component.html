@@ -3,7 +3,7 @@
     <p>{{ lembrete?.nomeRemedio }}</p>
     <p class="textHora">{{ lembrete?.hora }}</p>
     <div class="d-flex flex-row justify-content-center">
-      <p class="mx-2" *ngFor="let dia of lembrete?.diasSemana" [ngClass]="{ diaNaoSelecionado: dia.selecionado }">
+      <p class="mx-2" *ngFor="let dia of lembrete?.diasSemana" [ngClass]="{ diaNaoSelecionado: !dia.selecionado }">
         {{ diasDaSemanaMap.get(dia.index) }}
       </p>
     </div>

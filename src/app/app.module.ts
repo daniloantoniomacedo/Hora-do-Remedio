@@ -10,6 +10,8 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HomeComponent } from './home/home.component';
 import { EditarComponent } from './editar/editar.component';
+import { FormsModule } from '@angular/forms';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { EditarComponent } from './editar/editar.component';
     LembretesComponent,
     PopUpComponent,
     HomeComponent,
-    EditarComponent
+    EditarComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [RoutingModule],
   bootstrap: [AppComponent]

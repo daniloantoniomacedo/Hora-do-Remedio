@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,27 +11,29 @@ import { Lembrete } from '../lembrete';
 import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
-  selector: 'app-editar',
-  templateUrl: './editar.component.html',
-  styleUrls: ['./editar.component.css']
+  selector: 'app-cadastrar',
+  templateUrl: './cadastrar.component.html',
+  styleUrls: ['./cadastrar.component.css']
 })
-export class EditarComponent implements OnInit {
-
-  lembrete!: Lembrete;
-
-  id?: string | null;
+export class CadastrarComponent implements OnInit {
 
   subscription?: Subscription;
 
-  nomeRemedio: string = "";
+  nomeRemedio: string = "Insira o nome";
 
-  dataTermino: string = "2021-01-01";
+  diasDaSemana: Dia[] = [
+    new Dia(0, false)
+  ];
 
-  qtdTotal: number = 1;
+  dataTermino: string = this.formatarData(new Date(), "yyyy-MM-dd");
 
-  qtdDose: number = 1;
+  qtdTotal: number = 0;
+
+  qtdDose: number = 0;
 
   modal?: BsModalRef;
+
+  lembrete: Lembrete = new Lembrete(this.nomeRemedio, new Date(), this.diasDaSemana, new Date(), this.qtdTotal, this.qtdDose, "und");
 
   diasDaSemanaMap = new Map<number, string>([
     [0, DiasDaSemana.Domingo],
@@ -42,19 +45,18 @@ export class EditarComponent implements OnInit {
     [6, DiasDaSemana.Sabado]
   ]);
 
-  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private modalService: BsModalService, private router: Router) { }
+  constructor(private http: HttpClient, private modalService: BsModalService, private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.subscription = this.http.get<Lembrete>(environment.lembretesUrl+this.id).subscribe(
-      lembrete => {
-        this.lembrete = lembrete;
-        this.nomeRemedio = lembrete.nomeRemedio;
-        this.dataTermino = lembrete.dataTermino;
-        this.qtdTotal = lembrete.qtdTotal;
-        this.qtdDose = lembrete.qtdDose;
-      }
-    );
+  }
+
+  formatarData(date: Date, formato: string): string {
+    let datepipe: DatePipe = new DatePipe('en-US');
+    let dataFormatada: string | null = datepipe.transform(date, formato)
+    if(dataFormatada) {
+      return dataFormatada;
+    }
+    return "2021-01-01";
   }
 
   splitTime(): string[] | undefined {
@@ -144,7 +146,7 @@ export class EditarComponent implements OnInit {
       this.openModal("Selecione pelo menos um dia da semana.");
 
     }else{
-      this.subscription = this.http.put(environment.lembretesUrl+this.id, this.lembrete).subscribe();
+      //this.subscription = this.http.put(environment.lembretesUrl+this.id, this.lembrete).subscribe();
       this.retornarHome();
     }
 
@@ -166,3 +168,4 @@ export class EditarComponent implements OnInit {
   }
 
 }
+
